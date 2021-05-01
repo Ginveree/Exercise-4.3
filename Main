@@ -1,0 +1,52 @@
+package OverRL;
+
+public class Main {
+
+public static void main(String[] args) {
+		
+		System.out.println("*******************Fruit*******"
+				+ "***************");
+		Fruit objF = new Fruit("Fruit\n");	
+		System.out.println();
+		
+		System.out.println("******************Orange******"
+				+ "****************");
+		Orange objO = new Orange("Orange","Yellow","Australia");	
+		objO.notLocal();
+		System.out.print(objO.toString() + "\nYesterday, ");
+		objO.overRipe();
+		System.out.println("Today, there are " + objO.overRipe(3) + " bananas overripe!\n");
+		
+		System.out.println("******************Banana**********"
+				+ "************");
+		Banana objB = new Banana("Banana",'Y',6);
+		objB.ripe();
+		objB.local();
+		System.out.println("a) " + objB.toString() + objB.totalPrice());
+		System.out.println("b) " + objB.toString() + objB.totalPrice(10));
+		System.out.println("c) " + objB.toString() + objB.totalPrice(6, 0.90) + "\n");
+
+		
+		System.out.println("*******************Apple*********"
+				+ "*************");
+		Apple objA = new Apple(10,23.50);
+		objA.local();
+		System.out.println(objA.toString() + "\n");
+		
+		System.out.println("******************Red Apple*******"
+				+ "************");
+		RedApple objR = new RedApple(5,2.30);
+		System.out.println("The taste for yesterday's apple is " + objR.getTaste("bitter"));
+		System.out.println("The taste for today's apple is " + objR.getTaste("sweet", "sour") 
+		                   + "\n" + objR.toString() + "\n");
+		
+		System.out.println("****************Green Apple*****"
+				+ "**************");
+		GreenApple objG = new GreenApple(6,3.50,5,0.35);
+		System.out.println("The standard price for a plastic bag is RM " + objG.plasticT(1));
+		System.out.print("In my uncle's shop, ");
+		objG.plasticT();
+		System.out.println(objG.toString() + objG.plasticT(3,0.5) + " for 3 plastic bags!");
+	}
+
+}
