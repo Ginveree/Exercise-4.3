@@ -1,0 +1,26 @@
+package OverRL;
+
+public class Fruit {//super class
+	protected String name;
+	
+	//no argument
+	public Fruit() {//constructor with no argument
+		this.name = " ";
+	}
+	
+	public Fruit(String n) {//constructor with 1 argument
+		this.name = n;
+		System.out.println("Fruit constructor is invoked");
+	}
+	
+	//overriding method
+	public void local() {
+		System.out.println("This " + this.name + " are all from local!");
+	}
+	
+	//overriding method
+	public void notLocal() {
+		System.out.println("This " + this.name + " is not from local,");
+	}
+
+}
